@@ -11,16 +11,16 @@ void main(){
 class HomeScreen extends StatelessWidget{
 
   final List<String> items = [
-    'one',
-    'two',
-    'three',
-    'fourth',
-    'five',
-    'six',
     'seven',
-    'eight',
-    'nine',
     'ten',
+    'six',
+    'eight',
+    'five',
+    'three',
+    'one',
+    'four',
+    'nine',
+    'two',
   ];
 
   //This is function that let us to pass trough some screen
