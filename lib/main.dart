@@ -55,3 +55,40 @@ class HomeScreen extends StatelessWidget{
     );
   }
 }
+
+  //Created Second screen
+class SecondScreen extends StatelessWidget{
+  final String itemHolder;
+  SecondScreen({required Key key,required this.itemHolder}) : super(key: key);
+  goBack(BuildContext context){
+    Navigator.pop(context);
+  }
+
+  //Display second screen
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    //throw UnimplementedError();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Second Screen Activity'),
+      ),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          Center(
+            child: Text('Selected item = ' + itemHolder,
+            style: TextStyle(fontSize: 22),
+            textAlign: TextAlign.center),
+          ),
+          RaisedButton(
+            onPressed: () {goBack(context);},
+            color: Colors.lightBlue,
+            textColor: Colors.white,
+            child: Text('Go Back To Previous Screen'),
+          ),
+        ],
+      )
+    );
+  }
+}
