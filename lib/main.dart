@@ -27,7 +27,7 @@ class HomeScreen extends StatelessWidget{
   getItemAndNavigate(String item, BuildContext context){
     Navigator.push(context,
         MaterialPageRoute(
-            builder: (context) => SecondScreen(itemHolder : item)
+            builder: (context) => SecondScreen(itemHolder : item,)
         )
     );
   }
@@ -59,7 +59,7 @@ class HomeScreen extends StatelessWidget{
   //Created Second screen
 class SecondScreen extends StatelessWidget{
   final String itemHolder;
-  SecondScreen({required Key key,required this.itemHolder}) : super(key: key);
+  SecondScreen({required this.itemHolder});
   goBack(BuildContext context){
     Navigator.pop(context);
   }
